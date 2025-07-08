@@ -37,6 +37,9 @@ public class PizzaOrder {
                     pizzaType = scan.nextLine();
                     System.out.printf("Quantity: ");
                     quantity = scan.nextInt();
+                    if (quantity <= 0) {
+                        System.out.println("Quantity must be positive");
+                    }
                     addOrder(pizzas, quantities, pizzaType, quantity);
                     break;
                 case 2:
@@ -44,6 +47,9 @@ public class PizzaOrder {
                     index = scan.nextInt();
                     System.out.printf("New quantity: ");
                     newQuantity = scan.nextInt();
+                    if (newQuantity <= 0) {
+                        System.out.println("Quantity must be positive");
+                    }
                     updateOrder(quantities, --index, newQuantity);
                     break;
                 case 3:
